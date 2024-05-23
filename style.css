@@ -321,3 +321,257 @@ html {
 /* End Of Controls */
 
 /* End Of Section 1 */
+
+/* Section 2 */
+
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 0;
+}
+
+.section-2-heading {
+    font-size: 10rem;
+    font-weight: 200;
+    color: var(--black-color);
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.section-2-heading::before {
+    content: '';
+    position: absolute;
+    height: 130%;
+    width: 30vw;
+    background-image: linear-gradient(var(--primary-color), var(--white-color));
+    top: 0;
+    left: 0;
+    transform: skewX(-50deg);
+    transform-origin: left top;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.iphones {
+    width: 40vw;
+    height: 50vh;
+    background-image: linear-gradient(var(--primary-color),var(--white-color));
+    
+}
+
+.iphones:hover .iphone-img-1 {
+    transform: scale(0);
+}
+.iphones:hover .iphone-img-2 {
+    transform: scale(1);
+}
+
+.iphone-img-2 {
+    transform: scale(0);
+}
+
+.iphones img {
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+    position: absolute;
+    transition: all 1s;
+}
+
+.iphone-btns {
+    display: flex;
+}
+
+.iphone-btn {
+    width: 6rem;
+    height: 6rem;
+    background: linear-gradient(to right,rgb(51,51,51)60%, rgb(82,82,82));
+    margin: 5rem 3rem;
+    border-radius: 50%;
+    position: relative;
+
+} 
+
+.iphone-btn::before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    border: .1rem solid #6edae6;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 1rem;
+}
+
+.iphone-btns span {
+    position: absolute;
+    top: -3rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    width: max-content;
+    font-weight: 400;
+    transform: scale(0);
+    transition: all .5s;
+    
+}
+
+.iphone-btn:hover span {
+    transform: scale(1);
+}
+
+
+/* End Of Section 2 */
+
+/* section 3 */
+
+.section-3 {
+    width: 100%;
+    height: 150vh;
+    background-color: var(--black-color);
+    flex-direction: column;
+    padding: 15rem 0;
+    clip-path: polygon(68% 0, 100% 0, 100% 97%, 38% 100%, 0 100%, 0 3%);
+}
+
+.section-3-heading {
+    font-size: 10rem;
+    color: var(--primary-color);
+    font-weight: 200;
+    margin-bottom: 15rem;
+}
+
+.section-3-content {
+    width: 80%;
+    flex-direction: column;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.section-3-content img {
+    /* z-index: 1; */
+    width: inherit;
+}
+
+.change .macbook-img-1 {
+    transform: translateX(0);
+    transition: transform 3s;
+}
+
+.macbook-img-1 {
+    transform: rotateX(-80deg);
+    transform-origin: bottom;
+    
+}
+
+.loading-wrapper {
+    position: absolute;
+    top: 6%;
+    width: 60%;
+    height: 80%;
+    background: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url(images/MacBook/macbook-1-desktop.png) center no-repeat;
+    opacity: 0;
+}
+
+
+.change .loading-wrapper {
+    opacity: 1;
+    transition: all 1s 2s;
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+}
+
+.change .loading {
+    opacity: 0;
+    transition: 1s 5s;
+}
+
+.progress-bar {
+    width: 22rem;
+    height: .3rem;
+    background-color: #888;
+    margin: 2rem;
+    border-radius: 5rem;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.change .progress-bar::before {
+    width: 100%;
+    transition: all 1s 3s;
+}
+
+.loading i {
+    font-size: 10rem;
+    color: var(--white-color);
+}
+
+.macbook-info {
+    position: absolute;
+    opacity: 0;
+}
+
+.change .macbook-info {
+    opacity: 1;
+    transition: 1s 7s;
+}
+
+
+
+.macbook-info {
+    position: absolute;
+    width: 70rem;
+    text-align: center;
+}
+
+.macbook-info-heading {
+    font-size: 6rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.macbook-price {
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin: 3rem 0;
+}
+
+.macbook-btn {
+    width: 25rem;
+    height: 5rem;
+    background: linear-gradient(#ddd, #fff);
+    border-radius: .5rem;
+    border: none;
+    box-shadow:  .1rem .1rem .1rem #fff, -.1rem -.1rem .1rem #fff;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    /* position: absolute; */
+    /* bottom: 15rem; */
+}
+
+
+/* End of section 3 */
