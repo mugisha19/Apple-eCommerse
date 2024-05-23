@@ -1,3 +1,14 @@
+// Common JS
+
+document.querySelectorAll('.watch-control, .controls a').forEach((controls) => {
+    controls.addEventListener('click', e => {
+        e.preventDefault();
+    })
+})
+
+// End Of Common JS
+
+
 // Cube
 
 const cube = document.querySelector('.cube');
@@ -118,3 +129,62 @@ window.addEventListener('scroll', () => {
 })
 
 // end of  section 3
+
+// Section 4
+
+const watchBands = document.querySelector('.watch-bands')
+const watchCases = document.querySelector('.watch-cases')
+
+const watchTopControl = document.querySelector('.watch-control-up')
+const watchRightControl = document.querySelector('.watch-control-right')
+const watchLeftControl = document.querySelector('.watch-control-left')
+const watchDownControl = document.querySelector('.watch-control-down')
+
+let axisY = 0
+let axisX = 0
+
+const hideControls = () => {
+    if (axisY === -240) {
+        watchTopControl.classList.add('hideControls')
+    } else {
+        watchTopControl.classList.remove('hideControls')
+    }
+
+    if (axisY === 240) {
+        watchDownControl.classList.add('hideControls')
+    } else {
+        watchDownControl.classList.remove('hideControls')
+    }
+
+    if (axisX === 240) {
+        watchRightControl.classList.add('hideControls')
+    } else {
+        watchRightControl.classList.remove('hideControls')
+    }
+
+    if (axisX === -240) {
+        watchLeftControl.classList.add('hideControls')
+    } else {
+        watchLeftControl.classList.remove('hideControls')
+    }
+}
+
+watchTopControl.addEventListener('click', () => {
+    watchCases.style.marginTop = `${axisY -= 60}rem`;
+    hideControls()
+})
+
+watchDownControl.addEventListener('click', () => {
+    watchCases.style.marginTop = `${axisY += 60}rem`;
+    hideControls()
+})
+watchRightControl.addEventListener('click', () => {
+    watchBands.style.marginRight = `${axisX += 60}rem`;
+    hideControls()
+})
+watchLeftControl.addEventListener('click', () => {
+    watchBands.style.marginRight = `${axisX -= 60}rem`;
+    hideControls()
+})
+
+// End Of Section 4
